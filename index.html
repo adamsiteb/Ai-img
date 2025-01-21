@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مولد الصور بالذكاء الاصطناعي</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- إضافة Font Awesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav>
+        <div class="logo">AI Image Generator</div>
+        <div class="theme-switch">
+            <i class="fas fa-moon"></i>
+        </div>
+    </nav>
+
+    <!-- القسم الرئيسي -->
+    <main>
+        <div class="container">
+            <h1>مولد الصور بالذكاء الاصطناعي</h1>
+            <p class="subtitle">حول أفكارك إلى صور مذهلة باستخدام الذكاء الاصطناعي</p>
+
+            <!-- نموذج الإدخال -->
+            <div class="input-section">
+                <textarea id="promptInput" placeholder="اكتب وصفاً للصورة التي تريد إنشاءها..."></textarea>
+                <div class="buttons">
+                    <button id="generateBtn" class="primary-btn">
+                        <i class="fas fa-magic"></i>
+                        توليد الصورة
+                    </button>
+                    <button id="clearBtn" class="secondary-btn">
+                        <i class="fas fa-trash"></i>
+                        مسح
+                    </button>
+                </div>
+            </div>
+
+            <!-- قسم عرض الصور -->
+            <div class="gallery">
+                <h2>الصور المولدة</h2>
+                <div id="imageGrid" class="image-grid"></div>
+            </div>
+
+            <!-- قسم التحميل -->
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>جاري توليد الصورة...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2024</p>
+    </footer>
+
+    <!-- نافذة العرض المنبثقة -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img id="modalImage" src="/placeholder.svg" alt="صورة مكبرة">
+        <button id="downloadBtn" class="primary-btn">
+            <i class="fas fa-download"></i>
+            تحميل الصورة
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
